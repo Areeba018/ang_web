@@ -1,0 +1,87 @@
+<!-- These are Bootstrap 5 utility classes used to style a navbar. -->
+<!-- navbar-expand-lg : Controls when the navbar expands (becomes horizontal). -->
+<!-- navbar-light: Sets the navbar’s text color for use with light backgrounds. -->
+<!-- bg-white: Sets the background color to white (#ffffff). -->
+<!-- shadow-sm: Adds a small shadow effect below the navbar. -->
+
+<nav class="navbar  navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+        <!-- Logo -->
+        <!-- d-flex: This allows child elements (like the logo image and text) to be arranged horizontally by default. -->
+        <a class="navbar-brand d-flex align-items-center fw-bold text-dark" href="#">
+            <img src="assets/mastertask-logo.png" alt="MeisterTask Logo" height="40" />
+            <span class="fs-5">MeisterTask</span>
+        </a>
+
+
+        <!-- Toggle Button for Mobile View -->
+        <!-- This is a Bootstrap 5 navbar toggle button, which is used in mobile views to collapse and expand the navbar menu.  -->
+        <!-- class="navbar-toggler": This styles the button to match Bootstrap's default navbar toggler design. -->
+        <!-- data-bs-toggle="collapse": This is a Bootstrap 5 attribute that tells the button to toggle (expand/collapse) a menu. -->
+        <!-- data-bs-target="#navbarNav": Defines which menu should be toggled when the button is clicked. -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <!-- collapse → Hides/shows content based on screen size. -->
+        <!-- navbar-collapse → Ensures that the navbar collapses into a toggleable menu on small screens. -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- navbar-nav: It ensures proper spacing, alignment, and styling for the navigation items (<li class="nav-item">). -->
+            <ul class="navbar-nav mx-auto">
+                <!--mx-auto: Centers navbar items -->
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Product
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="/features">Features</a></li>
+                        <li><a class="dropdown-item" href="#">Integrations</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Solutions
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Teams</a></li>
+                        <li><a class="dropdown-item" href="#">Enterprise</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Resources
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Blog</a></li>
+                        <li><a class="dropdown-item" href="#">Templates</a></li>
+                        <li><a class="dropdown-item" href="#">Customer Stories</a></li>
+                        <li><a class="dropdown-item" href="#">Academy</a></li>
+                        <li><a class="dropdown-item" href="#">Community</a></li>
+                        <li><a class="dropdown-item" href="#">Help Center</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Enterprise</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Sales</a>
+                </li>
+
+            </ul>
+
+            <!-- Login & Get Started Buttons -->
+            <div class="d-flex align-items-center gap-4">
+                <a class="nav-link text-primary fw-semibold" href="#">Log in</a>
+                <a class="btn btn-primary rounded-pill px-4 py-2 fw-bold shadow-sm" href="#">Get started</a>
+            </div>
+        </div>
+    </div>
+</nav>

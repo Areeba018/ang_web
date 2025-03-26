@@ -57,3 +57,52 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+
+
+
+##  Project detail:
+##  Step 1: Set Up Your Angular Project
+If you don’t have an Angular project yet, create one using:
+ng new ang_web
+
+Then, open the project in VS Code or any code editor.
+
+##  Step 2: Install Bootstrap for Styling
+Since the design looks clean and modern, Bootstrap will help in styling. Run the following command to install Bootstrap:
+
+npm install bootstrap
+
+Now, add Bootstrap to angular.json:
+"styles": [
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "src/styles.css"
+],
+"scripts": [
+  "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+]
+##  Step 3: Create the Navbar Component
+Generate a new navbar component:
+ng generate component components/navbar
+
+This will create:
+
+src/app/components/navbar/navbar.component.ts
+
+src/app/components/navbar/navbar.component.html
+
+src/app/components/navbar/navbar.component.css
+
+## Step 4: Write the Navbar Code
+Now, edit navbar.component.html to add the MeisterTask-style navbar.
+
+## Step 5: Add Some Styling
+Open navbar.component.css and add
+
+## Step 6: Include Navbar in App Component
+Open app.component.html and replace everything
+
+## Step 7: Run Your Application
+Now, start your Angular app:
+ng serve

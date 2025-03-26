@@ -1,0 +1,83 @@
+.footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    color: #6c757d;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 15px;
+  }
+  
+  .footer-sections {
+    display: flex;     /* align and distribute space among elements. */
+    flex-wrap: wrap;   /* allows items to move to the next line if there isn’t enough space in the container. */
+    justify-content: space-between;
+    /* First item is placed at the start of the row. Last item is placed at the end of the row. Remaining items are evenly distributed between them, with equal spaces in between. */
+  }
+  
+  .footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-column h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin: 5px 0;
+  }
+  
+  .footer-column ul li a {
+    color: #6c757d;
+    text-decoration: none;
+  }
+  
+  .footer-bottom {
+
+    font-size: 14px;
+    color: #6c757d;
+  }
+
+  
+  .footer-bottom .brand {
+    font-weight: bold;
+    color: #4d4c7d;
+  }
+  
+  .footer-bottom nav {
+    display: flex;
+    gap: 1px;
+  }
+  
+  .footer-bottom nav a {
+    text-decoration: none;
+    color: #6c757d; 
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icons a img {
+    width: 30px;
+    height: 30px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .social-icons a img:hover {
+    opacity: 1;
+  }
