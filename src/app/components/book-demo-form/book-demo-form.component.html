@@ -1,0 +1,40 @@
+<div class="container mt-5" style="max-width: 600px;">
+    <h2 class="mb-4">Book a Demo</h2>
+  
+    <form [formGroup]="demoForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input class="form-control" formControlName="name" placeholder="Your name">
+        <div *ngIf="demoForm.get('name')?.invalid && demoForm.get('name')?.touched" class="text-danger">
+          <small>Name is required.</small>
+        </div> 
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input class="form-control" formControlName="email" placeholder="you@example.com">
+        <div *ngIf="demoForm.get('email')?.invalid && demoForm.get('email')?.touched" class="text-danger">
+          <small *ngIf="demoForm.get('email')?.hasError('required')">Email is required.</small>
+          <small *ngIf="demoForm.get('email')?.hasError('email')">Please enter a valid email.</small>
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Company</label>
+        <input class="form-control" formControlName="company" placeholder="Your company name">
+        <div *ngIf="demoForm.get('company')?.invalid && demoForm.get('company')?.touched" class="text-danger">
+          <small>Company is required.</small>
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Message</label>
+        <textarea class="form-control" formControlName="message" rows="4" placeholder="Optional message"></textarea>
+      </div>
+  
+      <button class="btn btn-primary" type="submit" [disabled]="!demoForm.valid">Submit</button>
+    </form>
+  </div>
+  
+  <!-- *ngIf acts like an if statement: If the expression inside *ngIf evaluates to true, the element will be rendered.-->
+  
